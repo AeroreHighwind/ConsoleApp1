@@ -16,7 +16,9 @@ namespace ConsoleApp1
 
             //RegularPolygonPerimeter();
 
-            BooleanHandling();
+            //BooleanHandling();
+
+            SwitchCases();
         }
 
         static void CalculatePerimeterV1()
@@ -71,6 +73,30 @@ namespace ConsoleApp1
             }
             catch (Exception ex) {
                 Console.WriteLine("The entered value is not a number");
+            }
+        }
+
+        static void SwitchCases()
+        {
+            float enteredValue;
+            Console.Write("Enter a number: ");
+            enteredValue = Convert.ToSingle(Console.ReadLine());
+
+            switch (enteredValue) {
+                case 0:
+                    Console.WriteLine("The entered number is zero");
+                    break;
+                case 10:
+                    Console.WriteLine("The entered number is 10");
+                    break;
+
+                case 100:
+                    Console.WriteLine("The entered number is 100");
+                    break;
+
+                default:
+                    Console.WriteLine("The entered number is not zero, ten or one hundred");
+                    break;
             }
         }
     }
